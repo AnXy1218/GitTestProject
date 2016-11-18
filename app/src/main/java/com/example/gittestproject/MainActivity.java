@@ -2,7 +2,9 @@ package com.example.gittestproject;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.View;
 import android.widget.TextView;
+import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
     private TextView tvHelloWorld;
@@ -14,5 +16,11 @@ public class MainActivity extends AppCompatActivity {
         tvHelloWorld = (TextView)findViewById(R.id.hello_world);
 
         tvHelloWorld.setText("你好，世界！");
+        tvHelloWorld.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Toast.makeText(MainActivity.this,"点击了Hello World！",Toast.LENGTH_SHORT).show();
+            }
+        });
     }
 }
