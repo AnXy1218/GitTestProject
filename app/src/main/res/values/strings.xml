@@ -1,3 +1,10 @@
 <resources>
     <string name="app_name">GitTestProject</string>
+    <string name="alpha">alpha</string>
+    <string name="scale">scale</string>
+    <string name="translate">translate</string>
+    <string name="rotate">rotate我需要实现的是跑马灯效果能不是在动画中实现，如果能实现那是更好的。实现不了也可以，至少这种得到了验证。</string>
+    <string name="start_tween">开启补间动画</string>
+    <string name="title_activity_jni">JNIActivity</string>
+    <string name="main_jni">开始jni</string>
 </resources>

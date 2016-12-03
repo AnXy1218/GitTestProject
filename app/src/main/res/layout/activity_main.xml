@@ -8,4 +8,24 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Hello World!" />
+
+    <Button
+        android:id="@+id/btn_tween_main"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:layout_centerInParent="true"
+        android:textSize="18sp"
+        android:text="@string/start_tween"/>
+
+    <Button
+        android:id="@+id/btn_jumpjni_main"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/btn_tween_main"
+        android:layout_marginTop="10dp"
+        android:padding="10dp"
+        android:layout_centerInParent="true"
+        android:textSize="18sp"
+        android:text="@string/main_jni"/>
 </RelativeLayout>
