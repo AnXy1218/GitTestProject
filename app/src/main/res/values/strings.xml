@@ -7,4 +7,7 @@
     <string name="start_tween">开启补间动画</string>
     <string name="title_activity_jni">JNIActivity</string>
     <string name="main_jni">开始jni</string>
+    <string name="title_activity_activit_retrofit">ActivitRetrofit</string>
+    <string name="input_phoneNum">请输入手机号</string>
+    <string name="main_retrofit">跳转到retrofit</string>
 </resources>
