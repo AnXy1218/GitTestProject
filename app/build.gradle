@@ -36,7 +36,7 @@ dependencies {
 
     compile 'com.squareup.okhttp3:okhttp:3.2,0'
     compile 'com.squareup.retrofit2:retrofit:2.1.0'  //配置retrofit
-    compile 'com.squareup.retrofit2:converter-gson:2.1.0'  //配置retrofit
-    compile 'com.google.code.gson:gson:2.6.2'
+    compile 'com.squareup.retrofit2:converter-gson:2.1.0'  //配置Gson的转换器
+    compile 'com.google.code.gson:gson:2.6.2'  //配置gson
     compile 'com.jakewharton:butterknife:7.0.1'
 }

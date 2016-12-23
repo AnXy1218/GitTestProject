@@ -1,5 +1,6 @@
 package com.example.gittestproject;
 
+import android.net.Uri;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
@@ -9,6 +10,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
+import android.widget.VideoView;
 
 import com.example.utils.JNIUtils;
 
@@ -20,6 +22,7 @@ public class JNIActivity extends AppCompatActivity {
     private TextView tvHelloWorld,tvResult;
     private EditText edNum1,edNum2;
     private Button btnAdd;
+    private VideoView videoView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -52,6 +55,10 @@ public class JNIActivity extends AppCompatActivity {
                 tvResult.setText(JNIUtils.addCal(a,b)+"");
             }
         });
+
+        videoView = (VideoView) findViewById(R.id.videoview_jni);
+        videoView.setVideoURI(Uri.parse("http://clips.vorwaerts-gmbh.de/big_buck_bunny.mp4"));
+        videoView.start();
     }
 
 }

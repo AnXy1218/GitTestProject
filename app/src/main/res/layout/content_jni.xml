@@ -65,4 +65,11 @@
         android:text="计算"
         android:textSize="18sp"
         android:gravity="center"/>
+
+    <VideoView
+        android:id="@+id/videoview_jni"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:layout_marginTop="10dp"
+        android:layout_below="@id/btn_add_jni"/>
 </RelativeLayout>

@@ -19,7 +19,6 @@ import butterknife.ButterKnife;
 import butterknife.OnClick;
 import retrofit2.Call;
 import retrofit2.Response;
-import retrofit2.Retrofit;
 
 /**
  * http://www.cnblogs.com/android-blogs/p/5752442.html
@@ -48,8 +47,8 @@ public class ActivitRetrofit extends AppCompatActivity implements PhoneCallBack<
                         .setAction("Action", null).show();
             }
         });
-
         ButterKnife.bind(this);
+
 
         retrofitUtil = new RetrofitUtil(this);
         retrofitUtil.initRetrofit();
