@@ -16,10 +16,11 @@ import com.example.utils.JNIUtils;
 
 /**
  * jni注意我没有使用v7包提供的属性和类,因为会出现各种问题
+ * 参考资料：http://www.cnblogs.com/xitang/p/4174619.html
  */
 public class JNIActivity extends AppCompatActivity {
 
-    private TextView tvHelloWorld,tvResult;
+    private TextView tvHelloWorld,tvResult,tvInfoFromJNI;
     private EditText edNum1,edNum2;
     private Button btnAdd;
     private VideoView videoView;
@@ -42,6 +43,7 @@ public class JNIActivity extends AppCompatActivity {
 
         tvHelloWorld = (TextView) findViewById(R.id.tv_helloworld_jni);
         tvResult = (TextView) findViewById(R.id.tv_result_jni);
+        tvResult = (TextView) findViewById(R.id.tv_printFromJNI_jni);
         edNum1 = (EditText) findViewById(R.id.ed_num1_jni);
         edNum2 = (EditText) findViewById(R.id.ed_num2_jni);
         btnAdd = (Button)findViewById(R.id.btn_add_jni);
@@ -53,6 +55,7 @@ public class JNIActivity extends AppCompatActivity {
                 int a = Integer.parseInt(edNum1.getEditableText().toString());
                 int b = Integer.parseInt(edNum2.getEditableText().toString());
                 tvResult.setText(JNIUtils.addCal(a,b)+"");
+                JNIUtils.callJNI("jni");
             }
         });
 

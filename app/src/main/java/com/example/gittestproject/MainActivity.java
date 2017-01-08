@@ -12,7 +12,7 @@ import com.example.retrofit.ActivitRetrofit;
 
 public class MainActivity extends AppCompatActivity {
     private TextView tvHelloWorld;
-    private Button btnTween,btnJni,btnRetrofit;//开启补间动画
+    private Button btnTween,btnJni,btnRetrofit,btnRecyclerview;//开启补间动画
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -22,12 +22,14 @@ public class MainActivity extends AppCompatActivity {
         btnTween = (Button) findViewById(R.id.btn_tween_main);
         btnJni = (Button)findViewById(R.id.btn_jumpjni_main);
         btnRetrofit = (Button)findViewById(R.id.btn_jumpRetrofit_main);
+        btnRecyclerview = (Button)findViewById(R.id.btn_jumpRecyclerview_main);
 
         tvHelloWorld.setText("你好，世界！");
         tvHelloWorld.setOnClickListener(clickListener);
         btnTween.setOnClickListener(clickListener);
         btnJni.setOnClickListener(clickListener);
         btnRetrofit.setOnClickListener(clickListener);
+        btnRecyclerview.setOnClickListener(clickListener);
     }
 
     private View.OnClickListener clickListener = new View.OnClickListener() {
@@ -49,6 +51,10 @@ public class MainActivity extends AppCompatActivity {
                 case R.id.btn_jumpRetrofit_main:
                     Intent retrofitIntent = new Intent(MainActivity.this,ActivitRetrofit.class);
                     startActivity(retrofitIntent);
+                    break;
+                case R.id.btn_jumpRecyclerview_main:
+                    Intent recyclerviewIntent = new Intent(MainActivity.this,RecyclerviewActivity.class);
+                    startActivity(recyclerviewIntent);
                     break;
             }
         }

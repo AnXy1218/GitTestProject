@@ -10,4 +10,5 @@
     <string name="title_activity_activit_retrofit">ActivitRetrofit</string>
     <string name="input_phoneNum">请输入手机号</string>
     <string name="main_retrofit">跳转到retrofit</string>
+    <string name="title_activity_recyclerview">RecyclerviewActivity</string>
 </resources>

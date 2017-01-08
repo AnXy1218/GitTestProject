@@ -15,9 +15,15 @@ android {
          * ndk的配置
          */
         ndk{
+            ldLibs "log", "z", "m"
             moduleName "helloJni"    //生成的so名字
             abiFilters "armeabi", "armeabi-v7a", "x86"   //输出指定三种abi体系结构下的so库。目前可有可无。
         }
+//        //屏蔽掉默认的jni编译生成过程
+//        sourceSets.main {
+//            jni.srcDirs = []
+//            jniLibs.srcDir 'src/main/libs'
+//        }
     }
     buildTypes {
         release {
@@ -38,5 +44,8 @@ dependencies {
     compile 'com.squareup.retrofit2:retrofit:2.1.0'  //配置retrofit
     compile 'com.squareup.retrofit2:converter-gson:2.1.0'  //配置Gson的转换器
     compile 'com.google.code.gson:gson:2.6.2'  //配置gson
+    compile 'com.squareup.retrofit2:adapter-rxjava:2.0.2' //配置rxjava
     compile 'com.jakewharton:butterknife:7.0.1'
+
+    compile 'com.github.bumptech.glide:glide:3.7.0'  //配置glide
 }

@@ -39,4 +39,15 @@
         android:layout_centerInParent="true"
         android:textSize="18sp"
         android:text="@string/main_retrofit"/>
+
+    <Button
+        android:id="@+id/btn_jumpRecyclerview_main"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/btn_jumpRetrofit_main"
+        android:layout_marginTop="10dp"
+        android:padding="10dp"
+        android:layout_centerInParent="true"
+        android:textSize="18sp"
+        android:text="Recyclerview"/>
 </RelativeLayout>

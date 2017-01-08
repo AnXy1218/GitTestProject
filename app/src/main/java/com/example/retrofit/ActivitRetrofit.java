@@ -28,6 +28,8 @@ public class ActivitRetrofit extends AppCompatActivity implements PhoneCallBack<
     EditText etPhone;
     @Bind(R.id.btn_query_retrofit)
     Button btnQueryPhone;
+    @Bind(R.id.btn_rxquery_retrofit)
+    Button btnRxQueryPhone;
     @Bind(R.id.tv_city_retrofit)
     TextView tvCity;
     private RetrofitUtil retrofitUtil;
@@ -48,10 +50,6 @@ public class ActivitRetrofit extends AppCompatActivity implements PhoneCallBack<
             }
         });
         ButterKnife.bind(this);
-
-
-        retrofitUtil = new RetrofitUtil(this);
-        retrofitUtil.initRetrofit();
 
 //        etPhone = (EditText) findViewById(R.id.ed_phone_retrofit);
 //        btnQueryPhone = (Button) findViewById(R.id.btn_query_retrofit);
@@ -77,13 +75,26 @@ public class ActivitRetrofit extends AppCompatActivity implements PhoneCallBack<
 
     }
 
-    @OnClick(R.id.btn_query_retrofit)
+    @OnClick({R.id.btn_query_retrofit,R.id.btn_rxquery_retrofit})
     @Override
     public void onClick(View v) {
         switch (v.getId()){
             case R.id.btn_query_retrofit:
+                if(retrofitUtil == null){
+                    retrofitUtil = new RetrofitUtil(this);
+                    retrofitUtil.initRetrofit();
+                }
                 if(!etPhone.getEditableText().toString().equals("")){
                     retrofitUtil.doRequest(etPhone.getEditableText().toString());
+                }
+                break;
+            case R.id.btn_rxquery_retrofit:
+                if(retrofitUtil == null){
+                    retrofitUtil = new RetrofitUtil(this);
+                    retrofitUtil.initRetrofitWithRxjava();
+                }
+                if(!etPhone.getEditableText().toString().equals("")){
+                    retrofitUtil.doRequestWithRxjava(etPhone.getEditableText().toString(),tvCity);
                 }
                 break;
         }

@@ -1,10 +1,12 @@
 package com.example.retrofit.data;
 
+import java.io.Serializable;
+
 /**
  * Created by Leovo on 2016/12/15.
  * 该类是手机号码归属地的实体类
  */
-public class PhoneResult {
+public class PhoneResult implements Serializable{
     /**
      * errNum: 0,
      * retMsg: "success",

@@ -23,6 +23,14 @@ JNIEXPORT jstring JNICALL Java_com_example_utils_JNIUtils_helloJni
 JNIEXPORT jint JNICALL Java_com_example_utils_JNIUtils_addCal
   (JNIEnv *, jclass, jint, jint);
 
+/*
+ * Class:     com_example_utils_JNIUtils
+ * Method:    callJNI
+ * Signature: (Ljava/lang/String;)V
+ */
+JNIEXPORT void JNICALL Java_com_example_utils_JNIUtils_callJNI
+  (JNIEnv *, jclass, jstring);
+
 #ifdef __cplusplus
 }
 #endif

@@ -24,13 +24,21 @@
         android:layout_height="40dp"
         android:layout_below="@id/ed_phone_retrofit"
         android:text="查询"/>
+    <Button
+        android:id="@+id/btn_rxquery_retrofit"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_marginTop="10dp"
+        android:layout_below="@id/btn_query_retrofit"
+        android:text="用rxjava查询"/>
     <TextView
         android:id="@+id/tv_city_retrofit"
         android:layout_width="match_parent"
         android:layout_height="40dp"
-        android:layout_below="@id/btn_query_retrofit"
+        android:layout_below="@id/btn_rxquery_retrofit"
         android:layout_marginTop="10dp"
         android:textSize="18sp"
-        android:gravity="center"/>
+        android:gravity="center"
+        android:background="#00ff00"/>
 
 </RelativeLayout>
