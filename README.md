@@ -4,6 +4,7 @@ GitTestProject项目是最初是自己用来测试用AS提交项目到Github的�
 ### 2.内容
 ##### 2.1 JNI
 包括调用c方法，以及c掉用java代码。
+**详细步骤讲解：**[JNI调用](https://www.jianshu.com/p/50786ee15139)
 ##### 2.2 视频播放
 使用VideoView播放一个小视频。
 ##### 2.3 Retrofit
